@@ -77,6 +77,7 @@
     }
 
     var shylight = function(div, replacements, changeCallback) {
+        div.setAttribute('contentEditable', true);
         onChange(div, replacements);
         ['keyup', 'paste', 'input', 'click'].forEach(function(event) { 
             div.addEventListener(event, function() {
