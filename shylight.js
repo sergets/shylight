@@ -90,7 +90,7 @@
     if (typeof module == 'object' && typeof module.exports == 'object') {
         module.exports = shylight;
     } else if (typeof define == 'function') {
-        define(shylight);
+        define(function() { return shylight; });
     } else { 
         (window || global).shylight = shylight;
     }
